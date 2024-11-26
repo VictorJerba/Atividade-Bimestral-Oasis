@@ -1,43 +1,38 @@
 /* Estilos Gerais */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     line-height: 1.6;
-    background: #f0f0f5;
+    background: #ffffff;
+}
+
+main{
+    padding: 5rem 12.5rem;
 }
 
 .container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
 }
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(90deg, #000, #555);
+    background: #1a1a1a;
     color: #fff;
-    padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-header .brand {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    padding: 20px 40px;
 }
-
 header img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid #fff;
+    width: 100px; /* Tamanho proporcional */
+    height: auto;
 }
 
 header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 0;
+    font-weight: bold;
 }
 
 header nav ul {
@@ -51,43 +46,80 @@ header nav ul {
 header nav ul li a {
     text-decoration: none;
     color: #fff;
+    font-size: 1rem;
     padding: 8px 15px;
     border-radius: 5px;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 header nav ul li a:hover, header nav ul li a.active {
-    background: #f4f4f4;
-    color: #333;
+    background: #ffcc00;
+    color: #1a1a1a;
 }
 
-/* Seções */
-.intro, .noticias, .content, .cta {
-    padding: 40px 20px;
+.header {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Banner */
+#banner {
+    height: 500px;
+    background-image: url('../img/oasis-live-2025.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    border-radius: 20px;
+}
+
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#banner .banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 20px;
     border-radius: 10px;
-    margin-bottom: 30px;
 }
 
-.intro {
-    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-    text-align: center;
+#banner h3 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.4;
 }
 
-.intro h2 {
-    font-size: 2.4rem;
-    color: #000;
-}
-
-.intro p {
-    font-size: 1.2rem;
+#banner .banner-body2 {
     margin-top: 10px;
-    color: #555;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 /* Notícias */
+
+.news {
+    display:flex;
+    column-gap: 2rem;
+    justify-content: center;
+}
+
 .noticias {
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
 }
 
 .noticias h2 {
@@ -97,38 +129,83 @@ header nav ul li a:hover, header nav ul li a.active {
     color: #333;
 }
 
+.noticias .noticia-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as notícias */
+}
+
 .noticias article {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-left: 4px solid #00796b;
-    background: #f7f7f7;
-    border-radius: 5px;
+    position: relative;
+    width: calc(33.333% - 20px); /* 3 por linha em telas grandes */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.noticias article:hover {
+    transform: scale(1.02);
+}
+
+.noticias article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.noticias article h3, 
+.noticias article p {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    right: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    margin: 0;
 }
 
 .noticias article h3 {
     font-size: 1.5rem;
-    color: #00796b;
+    font-weight: bold;
+    top: 20px;
 }
 
 .noticias article p {
     font-size: 1rem;
-    color: #555;
+    bottom: 20px;
+}
+
+.noticias article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 /* Seção Principal */
 .content {
-    background: #fafafa;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: rgb(188, 190, 190);
+    padding: 40px 20px;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .content h2 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Aumenta o tamanho do título da seção */
     margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
 }
 
 .content p {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
     margin-bottom: 15px;
 }
 
@@ -145,24 +222,17 @@ header nav ul li a:hover, header nav ul li a.active {
 }
 
 .content ul li {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Aumenta o tamanho do texto */
     margin: 10px 0;
-    position: relative;
-    padding-left: 20px;
-}
-
-.content ul li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #00796b;
 }
 
 /* Chamada para Ação */
 .cta {
-    background: #00796b;
+    background-color: #1a1a1a;
     color: #fff;
     text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -172,13 +242,13 @@ header nav ul li a:hover, header nav ul li a.active {
 }
 
 .cta p {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Aumenta o tamanho do texto */
     margin-bottom: 20px;
 }
 
 .cta .btn {
     background: #fff;
-    color: #00796b;
+    color: #1a1a1a;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -188,16 +258,17 @@ header nav ul li a:hover, header nav ul li a.active {
 }
 
 .cta .btn:hover {
-    background: #004d40;
+    background: #1a1a1a;
     color: #fff;
 }
 
 /* Rodapé */
 footer {
-    background: #333;
+    background: linear-gradient(90deg, #000, #000);
     color: #fff;
     text-align: center;
     padding: 15px 0;
+    padding-top: 0;
     font-size: 0.9rem;
 }
 
@@ -206,45 +277,10 @@ footer p {
 }
 
 footer p a {
-    color: #00bcd4;
+    color: #000000;
     text-decoration: none;
 }
 
 footer p a:hover {
     text-decoration: underline;
-}
-
-#banner {
-    height: 500px;
-    border: 1px solid #dcdceb;
-    background-color: #FFFFFF;
-    border-radius: 0.625rem;
-    color: #000000;
-    background-image: url('../img/oasis-live-2025\ \(1\).jpg');
-    background-repeat: no-repeat;
-    background-position: right;
-}
-
-#banner .banner-content {
-    width: 650px;
-    height: 100%;
-    background: linear-gradient(270deg, rgba(255, 255, 255, 0), #ffffff 50% );
-}
-
-#banner h3 {
-    margin: 0;
-}
-
-#banner .banner-body1{
-    padding: 3.75rem 0 0 2.8rem;
-    font-size: 4rem;
-    font-weight: 300;
-}
-
-#banner .banner-body2 {
-    margin-top: 1rem;
-    margin-left: 2.8rem;
-    font-weight: 500;
-    font-size: 1.4rem;
-
 }
