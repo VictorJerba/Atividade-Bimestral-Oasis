@@ -1,4 +1,4 @@
-/* Estilos Gerais */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -17,7 +17,7 @@ main{
     margin: 0 auto;
 }
 
-/* Cabeçalho */
+
 header {
     background: #1a1a1a;
     color: #fff;
@@ -25,7 +25,7 @@ header {
     padding: 20px 40px;
 }
 header img {
-    width: 100px; /* Tamanho proporcional */
+    width: 100px; 
     height: auto;
 }
 
@@ -64,7 +64,7 @@ header nav ul li a:hover, header nav ul li a.active {
     align-items: center;
 }
 
-/* Banner */
+
 #banner {
     height: 500px;
     background-image: url('../img/oasis-live-2025.jpg');
@@ -110,7 +110,6 @@ header nav ul li a:hover, header nav ul li a.active {
     font-weight: 300;
 }
 
-/* Notícias */
 
 .news {
     display:flex;
@@ -133,12 +132,12 @@ header nav ul li a:hover, header nav ul li a.active {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: center; /* Centraliza as notícias */
+    justify-content: center; 
 }
 
 .noticias article {
     position: relative;
-    width: calc(33.333% - 20px); /* 3 por linha em telas grandes */
+    width: calc(33.333% - 20px); 
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -188,7 +187,7 @@ header nav ul li a:hover, header nav ul li a.active {
     z-index: 1;
 }
 
-/* Seção Principal */
+
 .content {
     background: rgb(188, 190, 190);
     padding: 40px 20px;
@@ -198,14 +197,14 @@ header nav ul li a:hover, header nav ul li a.active {
 }
 
 .content h2 {
-    font-size: 2.5rem; /* Aumenta o tamanho do título da seção */
+    font-size: 2.5rem; 
     margin-bottom: 20px;
     color: #333;
     font-weight: bold;
 }
 
 .content p {
-    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    font-size: 1.2rem; 
     margin-bottom: 15px;
 }
 
@@ -222,11 +221,11 @@ header nav ul li a:hover, header nav ul li a.active {
 }
 
 .content ul li {
-    font-size: 1.2rem; /* Aumenta o tamanho do texto */
+    font-size: 1.2rem; 
     margin: 10px 0;
 }
 
-/* Chamada para Ação */
+
 .cta {
     background-color: #1a1a1a;
     color: #fff;
@@ -242,7 +241,7 @@ header nav ul li a:hover, header nav ul li a.active {
 }
 
 .cta p {
-    font-size: 1.2rem; /* Aumenta o tamanho do texto */
+    font-size: 1.2rem; 
     margin-bottom: 20px;
 }
 
@@ -262,7 +261,7 @@ header nav ul li a:hover, header nav ul li a.active {
     color: #fff;
 }
 
-/* Rodapé */
+
 footer {
     background: linear-gradient(90deg, #000, #000);
     color: #fff;
